@@ -18,7 +18,7 @@
 
 # APITest
 
-API test : DummyRestAPITest (http://dummy.restapiexample.com/)
+API test : DummyRestAPITest (https://petstore.swagger.io/)
 - Check the basic functionality of API.
 - API are not working with different edge cases, hence bugs are there
 
@@ -43,7 +43,7 @@ API test : DummyRestAPITest (http://dummy.restapiexample.com/)
 ### How to run the test
 
 ```
-gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
+gradle clean test -DbaseURI="https://petstore.swagger.io/v2" --stacktrace
 ```
 ### Test Report
 
@@ -60,41 +60,38 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 ├── serenity.properties
 ├── settings.gradle
 └── src
-├── main
-│             ├── java
-│             │             └── com
-│             │    └── api
-│             │                     ├── config
-│                                   │             ├── DefaultConfig.java
-│             │                     │             └── SessionVariables.java
-│             │                     ├── support
-│             │                     │             ├── RequestCollection.java
-│             │                     │             └── ServicesSupport.java
-│                  └── utils
-│             │                     └── FileUtils.java
-│             └── resources
-│                 ├── dev.properties
-│                 ├── prod.properties
-│                 ├── sit.properties
-│                 └── uat.properties
-└── test
-├── java
-│            └── com
-│                └── api
-│                     ├── steps
-│                     │             ├── CommonSteps.java
-│                     │             └── definition
-│                     │                └── EmployeeStepDefiniation.java
-│                     └── testrunner
-│                       └── TestRunner.java
-└── resources
-├── features
-│        └── EmployeeAPI.feature
-└── payloads
+    ├── main
+    │             ├── java
+    │             │             └── com
+    │             │                 └── api
+    │             │                     ├── config
+    │             │                     │             ├── DefaultConfig.java
+    │             │                     │             └── SessionVariables.java
+    │             │                     ├── support
+    │             │                     │             ├── RequestCollection.java
+    │             │                     │             └── ServicesSupport.java
+    │             │                     └── utils
+    │             │                         └── FileUtils.java
+    │             └── resources
+    │                 ├── dev.properties
+    │                 ├── prod.properties
+    │                 ├── sit.properties
+    │                 └── uat.properties
+    └── test
+        ├── java
+        │             └── com
+        │                 └── api
+        │                     ├── steps
+        │                     │             ├── CommonSteps.java
+        │                     │             └── definition
+        │                     │                 └── UserStepDefiniation.java
+        │                     └── testrunner
+        │                         └── TestRunner.java
+        └── resources
+            └── features
+                └── UserAPI.feature
 
-19 directories, 19 files
-
-
+18 directories, 19 files
 ````
 
 ###  ContinuousIntegration ContinuousDeployment
@@ -105,18 +102,18 @@ gradle clean test -DbaseURI="http://dummy.restapiexample.com" --stacktrace
 ## TestCases
 
 ### Automated TestCases(Gerkin Definitions are in detail)
-1. POST request to create Employee record.
-2. GET request to view details of all employee
-3. GET request to view details employee by Id
-4. DELETE request to delete employee record
+1. POST request to create user record.
+2. DELETE request to delete user record
 
 ### POSTMANCollection
 1. POSTMAN collection is attached
 
 ### Bugs
-- API frequently goes down and it become challenging to develop this test cases(https://streamable.com/xr0aj3)
-- edge cases are not working
+- API frequently goes down and it become challenging to develop this test cases
+- edge cases are not working are not developed
 - error codes
+- User had created the record with username but while deleting the record with the same username is not happening. For this reason test is failing.
+
 
 ### Suggestion how the could be in better shape
 - Currently it hard to run the test because of the frequent message by API stating "*too many requests*" and, request to API fails. In case API was capable to handle some tests done by me, it would have helped me uncover the deeper issue.  Currently, because of this blocker, it is hard to test. I saw many edge cases were not working while automating the test cases though I do not remember in specific since I had not made the notes.

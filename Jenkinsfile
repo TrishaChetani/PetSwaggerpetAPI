@@ -2,7 +2,7 @@
 
 def testNode = 'node'
 def testsBranch = params.TESTS_BRANCH
-def gitRepo = 'https://github.com/TrishaChetani/api-test.git'
+def gitRepo = 'https://github.com/TrishaChetani/petswaggerUserAPI.git'
 
 
 
@@ -10,7 +10,7 @@ def gitRepo = 'https://github.com/TrishaChetani/api-test.git'
 node(testNode) {
     properties([
             parameters([
-                    choice(name: 'base_url', defaultValue: "http://dummy.restapiexample.com/"),
+                    choice(name: 'base_url', defaultValue: "https://petstore.swagger.io/v2"),
                     string(name: 'TESTS_BRANCH', defaultValue: 'master', description: 'Branch to pull from the Tests Repo'),
                     choice(name: 'propertiesFile', defaultValue: "dev.properties", description: 'Pass properties file', choices: ['dev.properties', 'sit.properties', 'uat.properties', 'prod.properties']),
 
@@ -27,7 +27,7 @@ node(testNode) {
 
         }
         stage('Pulling Automation Code') {
-            sh "git clone https://github.com/TrishaChetani/api-test.git"
+            sh "git clone https://github.com/TrishaChetani/petswaggerUserAPI.git"
         }
 
         stage('Executing Test Scenarios') {

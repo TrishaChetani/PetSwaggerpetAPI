@@ -33,7 +33,7 @@ public class CommonSteps {
      * @param bodyPrefs
      */
     @Step
-    public void createEmployee(Map<String, String> bodyPrefs) {
+    public void createUser(Map<String, String> bodyPrefs) {
         new HashMap<>(bodyPrefs).entrySet().forEach(e -> {
             if (e.getValue() == null)
                 e.setValue("");
@@ -45,39 +45,15 @@ public class CommonSteps {
 
     }
 
-    /*
-     * GET request with QueryParam
-     * @param bodyPrefs
-     */
-    @Step
-    public void getEmployeeById(Map<String, String> prefs) {
-        Map<String, String> params = new HashMap<>(prefs);
-        params.entrySet().forEach(e -> {
-            if (e.getValue() == null)
-                e.setValue("");
-            spec = rest().baseUri(defaultConfig.baseURI).headers("*", "*").contentType(ContentType.JSON).pathParam(e.getKey(), e.getValue()).when().log().all();
-            Response response = servicesSupport.executeRequest(spec, "GET", defaultConfig.viewDetailByIdEndPoint);
-            Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
-        });
 
-    }
 
-    /*
-     * GET request without QueryParam
-     */
-    @Step
-    public void getAllEmployeeDetails() {
-        spec = rest().baseUri(defaultConfig.baseURI).headers("*", "*").contentType(ContentType.JSON).when().log().all();
-        Response response = servicesSupport.executeRequest(spec, "GET", defaultConfig.viewDetailEndPoint);
-        Serenity.setSessionVariable(SessionVariables.RESPONSE_SESSION_VARIABLE).to(response);
-    }
 
     /*
      * DELETE request
      * @param bodyPrefs
      */
     @Step
-    public void removeEmployee(Map<String, String> bodyPrefs) {
+    public void removeUser(Map<String, String> bodyPrefs) {
         Map<String, String> params = new HashMap<>(bodyPrefs);
         params.entrySet().forEach(e -> {
             if (e.getValue() == null)
@@ -93,9 +69,9 @@ public class CommonSteps {
      * Verify status code
      */
     @Step
-    public void verifyResponseCode() {
+    public void verifyResponseCode(Integer code) {
         Response result = Serenity.sessionVariableCalled("response");
-        assertThat("Status code matching", result.getStatusCode(), equalTo(200));
+        assertThat("Status code matching", result.getStatusCode(), equalTo(code));
     }
 
 
