@@ -53,6 +53,7 @@ gradle clean test -DbaseURI="https://petstore.swagger.io/v2" --stacktrace
 
 ````
 .
+.
 ├── Jenkinsfile
 ├── README.md
 ├── build.gradle
@@ -61,37 +62,41 @@ gradle clean test -DbaseURI="https://petstore.swagger.io/v2" --stacktrace
 ├── settings.gradle
 └── src
     ├── main
-    │             ├── java
-    │             │             └── com
-    │             │                 └── api
-    │             │                     ├── config
-    │             │                     │             ├── DefaultConfig.java
-    │             │                     │             └── SessionVariables.java
-    │             │                     ├── support
-    │             │                     │             ├── RequestCollection.java
-    │             │                     │             └── ServicesSupport.java
-    │             │                     └── utils
-    │             │                         └── FileUtils.java
-    │             └── resources
-    │                 ├── dev.properties
-    │                 ├── prod.properties
-    │                 ├── sit.properties
-    │                 └── uat.properties
+    │   ├── java
+    │   │   └── com
+    │   │       └── api
+    │   │           ├── config
+    │   │           │   ├── DefaultConfg.java
+    │   │           │   └── SessionVariabl.java
+    │   │           ├── support
+    │   │           │   ├── RequestCollection.java
+    │   │           │   └── ServicesSupport.java
+    │   │           └── utils
+    │   │               └── FileUtils.java
+    │   └── resources
+    │       ├── dev.properties
+    │       ├── prod.properties
+    │       ├── sit.properties
+    │       └── uat.properties
     └── test
         ├── java
-        │             └── com
-        │                 └── api
-        │                     ├── steps
-        │                     │             ├── CommonSteps.java
-        │                     │             └── definition
-        │                     │                 └── UserStepDefiniation.java
-        │                     └── testrunner
-        │                         └── TestRunner.java
+        │   └── com
+        │       └── api
+        │           ├── steps
+        │           │   ├── CommonSteps.java
+        │           │   └── definition
+        │           │       └── PetStepDefiniation.java
+        │           └── testrunner
+        │               └── TestRunner.java
         └── resources
-            └── features
-                └── UserAPI.feature
+            ├── features
+            │   └── PetAPI.feature
+            └── photos
+                ├── pet.jpeg
+                └── pet1.jpeg
 
-18 directories, 19 files
+19 directories, 21 files
+
 ````
 
 ###  ContinuousIntegration ContinuousDeployment
@@ -102,8 +107,10 @@ gradle clean test -DbaseURI="https://petstore.swagger.io/v2" --stacktrace
 ## TestCases
 
 ### Automated TestCases(Gerkin Definitions are in detail)
-1. POST request to create user record.
-2. DELETE request to delete user record
+1. POST request to create pet record.
+2. DELETE request to delete pet record
+3. UPDATE request to update pet record
+4. FETCH request to get pet record
 
 ### POSTMANCollection
 1. POSTMAN collection is attached
@@ -112,7 +119,8 @@ gradle clean test -DbaseURI="https://petstore.swagger.io/v2" --stacktrace
 - API frequently goes down and it become challenging to develop this test cases
 - edge cases are not working are not developed
 - error codes
-- User had created the record with username but while deleting the record with the same username is not happening. For this reason test is failing.
+- pet had created the record with username but while deleting the record with the same username is not happening. For this reason test is failing.
+- updating pet with invalid image is also possible and service is returning 200.
 
 
 ### Suggestion how the could be in better shape

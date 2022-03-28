@@ -4,13 +4,15 @@ import java.io.*;
 import java.util.Properties;
 
 
-public class DefaultConfig {
+public class DefaultConfg {
 
 
     public final String CURRENT_DIR = System.getProperty("user.dir");
     public final String baseURI = System.getProperty("baseURI");
-    public final String createEndPoint = "/user";
-    public final String deleteRecordEndpoint = "/user/{username}";
+    public final String createEndPoint = "/pet/{petId}/uploadImage";
+    public final String deleteRecordEndpoint = "/pet/{petId}";
+    public final String updatePet = "/pet";
+    public final String fetchPet = "/pet/findByStatus";
 
 
     public void test() throws IOException {

@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7ad65fa-7e0a-4f12-a384-ffb37680f439" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/UserAPI.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DemoAPI.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/PetAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/config/DefaultConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/config/DefaultConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/config/DefaultConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/config/DefaultConfg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/config/SessionVariables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/config/SessionVariabl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/api/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/api/steps/CommonSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/api/steps/definition/EmployeeStepDefiniation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/api/steps/definition/UserStepDefiniation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/api/steps/definition/UserStepDefiniation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/api/testrunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/api/testrunner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EmployeeAPI.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UserAPI.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +31,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="api-test" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -52,6 +48,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,6 +67,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
