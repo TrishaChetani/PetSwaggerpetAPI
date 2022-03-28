@@ -2,7 +2,7 @@
 
 def testNode = 'node'
 def testsBranch = params.TESTS_BRANCH
-def gitRepo = 'https://github.com/TrishaChetani/petswaggerUserAPI.git'
+def gitRepo = 'https://github.com/TrishaChetani/PetSwaggerpetAPI.git'
 
 
 
@@ -27,7 +27,7 @@ node(testNode) {
 
         }
         stage('Pulling Automation Code') {
-            sh "git clone https://github.com/TrishaChetani/petswaggerUserAPI.git"
+            sh "git clone https://github.com/TrishaChetani/PetSwaggerpetAPI.git"
         }
 
         stage('Executing Test Scenarios') {
