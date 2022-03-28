@@ -35,7 +35,7 @@ public class CommonSteps {
      * @param bodyPrefs
      */
     @Step
-    public void uploadImage(Map<String, String> bodyPrefs) {
+    public void uploadPetImage(Map<String, String> bodyPrefs) {
         Map<String, String> params = new HashMap<>(bodyPrefs);
         params.entrySet().forEach(e -> {
             if (e.getValue() == null)
@@ -53,7 +53,7 @@ public class CommonSteps {
      */
 
     @Step
-    public void updateInformation(Map<String, String> bodyPrefs) {
+    public void updatePetRequest(Map<String, String> bodyPrefs) {
         new HashMap<>(bodyPrefs).entrySet().forEach(e -> {
             if (e.getValue() == null)
                 e.setValue("");
@@ -68,7 +68,7 @@ public class CommonSteps {
      * @param bodyPrefs
      */
     @Step
-    public void removeInformation(Map<String, String> bodyPrefs) {
+    public void removePetRequest(Map<String, String> bodyPrefs) {
         Map<String, String> params = new HashMap<>(bodyPrefs);
         params.entrySet().forEach(e -> {
             if (e.getValue() == null)
@@ -84,7 +84,7 @@ public class CommonSteps {
      * @param bodyPrefs
      */
     @Step
-    public void fetchRequest(Map<String, String> bodyPrefs) {
+    public void fetchPetRequest(Map<String, String> bodyPrefs) {
         Map<String, String> params = new HashMap<>(bodyPrefs);
         params.entrySet().forEach(e -> {
             if (e.getValue() == null)
@@ -101,7 +101,7 @@ public class CommonSteps {
      * @param code
      */
     @Step
-    public void response(int code) {
+    public void responseCode(int code) {
         Response result = Serenity.sessionVariableCalled("response");
         assertThat("Status code matching", result.getStatusCode(), equalTo(code));
     }

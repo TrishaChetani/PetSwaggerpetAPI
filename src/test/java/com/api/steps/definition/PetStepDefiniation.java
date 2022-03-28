@@ -19,7 +19,7 @@ public class PetStepDefiniation {
 
 
     @When("I request service to create to upload image")
-    public void create(DataTable prefs) {
+    public void createPetInformation(DataTable prefs) {
         commonSteps.uploadImage(prefs.asMap(String.class, String.class));
         Response result = Serenity.sessionVariableCalled("response");
         result.then().assertThat().body("$", hasKey("code"));
@@ -29,7 +29,7 @@ public class PetStepDefiniation {
 
 
     @When("I request service to update the pet information")
-    public void updateInformation(DataTable prefs) {
+    public void updatePetInformation(DataTable prefs) {
         commonSteps.updateInformation(prefs.asMap(String.class, String.class));
         Response result = Serenity.sessionVariableCalled("response");
         result.then().assertThat().body("$", hasKey("id"));
@@ -38,13 +38,13 @@ public class PetStepDefiniation {
     }
 
     @When("I request service to fetch the pet information")
-    public void fetchInformation(DataTable prefs) {
+    public void fetchPetInformation(DataTable prefs) {
         commonSteps.fetchRequest(prefs.asMap(String.class, String.class));
         Response result = Serenity.sessionVariableCalled("response");
     }
 
     @When("I request service to delete the pet information")
-    public void deleteInformation(DataTable prefs) {
+    public void deletePetInformation(DataTable prefs) {
         commonSteps.removeInformation(prefs.asMap(String.class, String.class));
         Response result = Serenity.sessionVariableCalled("response");
         Integer StatusCode = result.statusCode();
@@ -56,7 +56,7 @@ public class PetStepDefiniation {
     }
 
     @Then("the service returns the status {int}")
-    public void response(int code) {
-        commonSteps.response(code);
+    public void responseCode(int code) {
+        commonSteps.responseCode(code);
     }
 }
