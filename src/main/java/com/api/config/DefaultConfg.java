@@ -1,6 +1,7 @@
 package com.api.config;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 
@@ -8,11 +9,11 @@ public class DefaultConfg {
 
 
     public final String CURRENT_DIR = System.getProperty("user.dir");
-    public final String baseURI = System.getProperty("baseURI");
-    public final String createEndPoint = "/pet/{petId}/uploadImage";
-    public final String deleteRecordEndpoint = "/pet/{petId}";
-    public final String updatePet = "/pet";
-    public final String fetchPet = "/pet/findByStatus";
+    public final String BASEURI = System.getProperty("baseURI");
+    public final String CREATEENDPOINT = "/pet/{petId}/uploadImage";
+    public final String DELETEENDPOINT = "/pet/{petId}";
+    public final String UPDATEENDPOINT = "/pet";
+    public final String FETCHENDPOINT = "/pet/findByStatus";
 
 
     public void test() throws IOException {

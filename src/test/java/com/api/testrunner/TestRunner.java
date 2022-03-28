@@ -2,9 +2,8 @@ package com.api.testrunner;
 
 
 import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
-
 import net.serenitybdd.cucumber.CucumberWithSerenity;
+import org.junit.runner.RunWith;
 
 
 @RunWith(CucumberWithSerenity.class)
@@ -13,6 +12,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
         glue = {"com.api.steps.definition"})
 public class TestRunner {
 
-  // private static final Logger LOGGER = LoggerFactory.getLogger(TestRunner.class);
+    // private static final Logger LOGGER = LoggerFactory.getLogger(TestRunner.class);
 
 }

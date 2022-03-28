@@ -120,7 +120,7 @@ gradle clean test -DbaseURI="https://petstore.swagger.io/v2" --stacktrace
 - edge cases are not working are not developed
 - error codes
 - pet had created the record with username but while deleting the record with the same username is not happening. For this reason test is failing.
-- updating pet with invalid image is also possible and service is returning 200.
+- updating pet with invalid image is also possible and service is returning 200.(I have commented the Gerkin file)
 
 
 ### Suggestion how the could be in better shape

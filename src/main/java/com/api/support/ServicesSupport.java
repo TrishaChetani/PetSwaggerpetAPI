@@ -14,6 +14,7 @@ public class ServicesSupport {
 
     /**
      * Converts an Input Stream to a JSON object
+     *
      * @param is Input Stream to be converted (a JSON file in the project)
      * @return
      */
